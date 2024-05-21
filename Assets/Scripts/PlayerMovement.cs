@@ -20,11 +20,11 @@ public class PlayerMovement : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
 
         if(isGrounded() && Input.GetButtonDown("Jump")){
-            rb.velocity = new Vector(rb.velocity.x, jump);
+            rb.velocity = new Vector(rb.velocity.x, jump)
         }
 
         if(input.GetButtonDown("Jump") && rb.velocity.y > 0f){
-            rb.velocity = new Vector(rb.velocity.x, rb.velocity.y * 0.7f);
+            rb.velocity = new Vector(rb.velocity.x, rb.velocity.y * 0.7f)
         }
         
         Flip();
