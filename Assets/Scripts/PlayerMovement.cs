@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
             lastShotTime = Time.time; // Update the last shot time
         }
 
-        if (Input.GetButtonDown("Fire2") && Time.time >= lastDashTime + dashCooldown && !isDashing) // Check if dash input is pressed and dash is not on cooldown
+        if (Input.GetButtonDown("Dash") && Time.time >= lastDashTime + dashCooldown && !isDashing) // Check if dash input is pressed and dash is not on cooldown
         {
             StartCoroutine(Dash());
         }
