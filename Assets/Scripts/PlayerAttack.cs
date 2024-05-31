@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BulletCollision : MonoBehaviour
+public class PlayerAttack : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {

@@ -37,11 +37,6 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jump);
         }
 
-        if (Input.GetButtonDown("Jump") && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-        }
-
         if (Input.GetButtonDown("Fire1") && Time.time >= lastShot + reloadTime) // Check if enough time has passed since the last shot
         {
             Shoot();

@@ -12,45 +12,60 @@ public class Enemy : MonoBehaviour
     private float lastShotEnemy;
     private Transform player;
     private Rigidbody2D rb;
+    private bool facingRight = false;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        lastShotEnemy = Time.time + fireRate;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
     void Update()
     {
-        if (Time.time >= lastShotEnemy)
-        {
-            Shoot();
-            lastShotEnemy = Time.time + fireRate;
-        }
-
         if (player != null)
         {
-            Vector2 direction = (player.position - transform.position).normalized;
-            transform.Translate(direction * moveSpeed * Time.deltaTime);
+            MoveTowardsPlayer();
 
-            // Check if the player is in front of the enemy before shooting
-            if (Time.time >= lastShotEnemy && Vector2.Dot(direction, transform.right) > 0)
+            if (Time.time >= lastShotEnemy)
             {
                 Shoot();
-                lastShotEnemy = Time.time + fireRate;
             }
         }
     }
 
+    private void MoveTowardsPlayer()
+    {
+        transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+
+        if (player.position.x > transform.position.x && !facingRight)
+        {
+            Flip();
+        }
+        else if (player.position.x < transform.position.x && facingRight)
+        {
+            Flip();
+        }
+
+    }
+
+    private void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 enemyScale = transform.localScale;
+        enemyScale.x *= -1;
+        transform.localScale = enemyScale;
+    }
+
     private void Shoot()
     {
-        if (player == null) return;
-
         Vector2 direction = (player.position - enemyFirePoint.position).normalized;
+        direction.y = 0; // Ensure the bullet only travels in the x direction
+
         GameObject bullet = Instantiate(bulletPrefab, enemyFirePoint.position, enemyFirePoint.rotation);
-        Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
-        bulletRb.velocity = direction * bulletSpeed;
+        bullet.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+        lastShotEnemy = Time.time + fireRate;
         Destroy(bullet, 2f); // Destroy the bullet after 2 seconds
+
     }
 }
