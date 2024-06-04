@@ -12,17 +12,20 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-     currHealth = maxHealth;   
+        currHealth = maxHealth;
     }
 
-    public void TakeDamage(int damage){
+    public void TakeDamage(int damage)
+    {
         currHealth -= damage;
-        if(currHealth <= 0){
+        if (currHealth <= 0)
+        {
             Die();
         }
     }
 
-    private void Die(){
+    private void Die()
+    {
         if (gameObject.CompareTag("Player"))
         {
             FindObjectOfType<GameManager>().GameOver();
