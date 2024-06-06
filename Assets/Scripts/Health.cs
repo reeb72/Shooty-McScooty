@@ -1,23 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Health : MonoBehaviour
 {
     public int maxHealth = 100;
     private int currHealth;
-    public HealthBar healthBar;
+    public HealthManager healthBar; // Reference to HealthBar script
 
     // Start is called before the first frame update
     void Start()
     {
         currHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth); // Initialize the health bar
+    }
+
+    void Update()
+    {
+        // Any additional health-related logic can go here
     }
 
     public void TakeDamage(int damage)
     {
         currHealth -= damage;
+        if (currHealth < 0) currHealth = 0; // Ensure health doesn't go below zero
+        healthBar.SetHealth(currHealth, maxHealth); // Update the health bar
         if (currHealth <= 0)
         {
             Die();
