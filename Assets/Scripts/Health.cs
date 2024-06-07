@@ -25,8 +25,14 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currHealth -= damage;
-        if (currHealth < 0) currHealth = 0; // Ensure health doesn't go below zero
+
+        if (currHealth < 0)
+        {
+            currHealth = 0; // Ensure health doesn't go below zero
+        }
+
         healthBar.SetHealth(currHealth, maxHealth); // Update the health bar
+
         if (currHealth <= 0)
         {
             Die();
