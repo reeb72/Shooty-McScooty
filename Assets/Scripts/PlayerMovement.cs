@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private float jump = 8f;
     private bool facingRight = true;
     private float lastShot;
-    private float reloadTime = 0.55f;
+    private float reloadTime = 0.6f;
 
     private bool isDashing;
     private float dashDistance = 10f;

@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public void GameOver()
     {
-        // Display Game Over UI, reload scene, or load Game Over scene (Going to do later)
-        Debug.Log("Game Over!");
+        PlayerPrefs.SetInt("PreviousSceneIndex", SceneManager.GetActiveScene().buildIndex);
+        PlayerPrefs.Save();
+        SceneManager.LoadScene(2);
     }
 }

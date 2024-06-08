@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     private Transform player;
     private Rigidbody2D rb;
     private bool facingRight = false;
+    public float detectionRange = 10f;
+    public float stoppingDistance = 7.5f;
 
     void Start()
     {
@@ -25,9 +27,19 @@ public class Enemy : MonoBehaviour
     {
         if (player != null)
         {
-            MoveTowardsPlayer();
+            float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+            Debug.Log("Distance to Player: " + distanceToPlayer);
 
-            if (Time.time >= lastShotEnemy)
+            if (distanceToPlayer <= detectionRange && distanceToPlayer > stoppingDistance)
+            {
+                MoveTowardsPlayer();
+            }
+            else
+            {
+                StopMoving();
+            }
+
+            if (distanceToPlayer <= detectionRange && Time.time >= lastShotEnemy)
             {
                 Shoot();
             }
@@ -67,5 +79,11 @@ public class Enemy : MonoBehaviour
         lastShotEnemy = Time.time + fireRate;
         Destroy(bullet, 2f); // Destroy the bullet after 2 seconds
 
+    }
+
+    private void StopMoving()
+    {
+        Debug.Log("Stopped moving");
+        rb.velocity = Vector2.zero; // Stop the enemy's movement
     }
 }

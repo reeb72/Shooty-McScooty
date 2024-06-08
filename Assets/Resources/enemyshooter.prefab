@@ -44,8 +44,9 @@ GameObject:
   - component: {fileID: 3001853674185355882}
   - component: {fileID: 8734202360899629207}
   - component: {fileID: 1249790195582468716}
+  - component: {fileID: 4188724410688855311}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: enemyshooter
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,6 +206,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2397319637650059149, guid: cbfeb849c168b304db1f2ef01e972f26, type: 3}
   enemyFirePoint: {fileID: 2885201757135948345}
-  bulletSpeed: 10
-  moveSpeed: 1.5
-  fireRate: 3
+  bulletSpeed: 8
+  moveSpeed: 2
+  fireRate: 3.5
+  detectionRange: 13.5
+  stoppingDistance: 6.5
+--- !u!114 &4188724410688855311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7407794410609700203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d306a742fffe4346bc2723d42f83157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 15
+  healthBar: {fileID: 0}

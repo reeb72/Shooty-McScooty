@@ -31,7 +31,10 @@ public class Health : MonoBehaviour
             currHealth = 0; // Ensure health doesn't go below zero
         }
 
-        healthBar.SetHealth(currHealth, maxHealth); // Update the health bar
+        if (gameObject.CompareTag("Player"))
+        {
+            healthBar.SetHealth(currHealth, maxHealth); // Update the health bar
+        }
 
         if (currHealth <= 0)
         {
