@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
         bulletRb.velocity = new Vector2(facingRight ? bulletSpeed : -1f * bulletSpeed, 0); // TERTIARY OPERATOR USAGE
 
         // Remove the bullet once it heads offScreen 
-        Destroy(bullet, 3f);
+        Destroy(bullet, 2f);
     }
 
     private IEnumerator Dash()

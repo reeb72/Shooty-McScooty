@@ -28,7 +28,6 @@ public class Enemy : MonoBehaviour
         if (player != null)
         {
             float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-            Debug.Log("Distance to Player: " + distanceToPlayer);
 
             if (distanceToPlayer <= detectionRange && distanceToPlayer > stoppingDistance)
             {
@@ -83,7 +82,6 @@ public class Enemy : MonoBehaviour
 
     private void StopMoving()
     {
-        Debug.Log("Stopped moving");
         rb.velocity = Vector2.zero; // Stop the enemy's movement
     }
 }
