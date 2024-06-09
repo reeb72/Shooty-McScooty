@@ -6,8 +6,8 @@ using TMPro;
 
 public class Health : MonoBehaviour
 {
-    public int maxHealth = 100;
-    private int currHealth;
+    public float maxHealth = 100;
+    private float currHealth;
     public HealthManager healthBar; // Reference to HealthBar script
 
     // Start is called before the first frame update
@@ -17,12 +17,7 @@ public class Health : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth); // Initialize the health bar
     }
 
-    void Update()
-    {
-        // Any additional health-related logic can go here
-    }
-
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         currHealth -= damage;
 
@@ -54,7 +49,7 @@ public class Health : MonoBehaviour
         }
     }
 
-    public int GetCurrentHealth()
+    public float GetCurrentHealth()
     {
         return currHealth;
     }

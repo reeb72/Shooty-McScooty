@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private bool facingRight = true;
     private float lastShot;
     private float reloadTime = 0.6f;
+    private bool doubleShot = false;
 
     private bool isDashing;
     private float dashDistance = 10f;
@@ -93,7 +95,18 @@ public class PlayerMovement : MonoBehaviour
         bulletRb.velocity = new Vector2(facingRight ? bulletSpeed : -1f * bulletSpeed, 0); // TERTIARY OPERATOR USAGE
 
         // Remove the bullet once it heads offScreen 
-        Destroy(bullet, 2f);
+        Destroy(bullet, 1.5f);
+
+        if (doubleShot)
+        {
+            StartCoroutine(secondShot());
+        }
+    }
+
+    private IEnumerator secondShot()
+    {
+        yield return new WaitForSeconds(0.25f);
+        Shoot();
     }
 
     private IEnumerator Dash()
@@ -106,5 +119,31 @@ public class PlayerMovement : MonoBehaviour
         rb.gravityScale = originalGravity;
         isDashing = false;
         lastDash = Time.time; // Update the last dash time
+    }
+
+    // Methods to handle power-ups
+    public void IncreaseSpeed(float amount)
+    {
+        speed += amount;
+    }
+
+    public void IncreaseDashDistance(float amount)
+    {
+        dashDistance += amount;
+    }
+
+    public void IncreaseJumpHeight(float amount)
+    {
+        jump += amount;
+    }
+
+    public void DecreaseReloadTime(float amount)
+    {
+        reloadTime -= amount;
+    }
+
+    public void EnableDoubleShot()
+    {
+        doubleShot = true;
     }
 }

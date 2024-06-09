@@ -76,7 +76,7 @@ public class Enemy : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, enemyFirePoint.position, enemyFirePoint.rotation);
         bullet.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
         lastShotEnemy = Time.time + fireRate;
-        Destroy(bullet, 2f); // Destroy the bullet after 2 seconds
+        Destroy(bullet, 2.5f); // Destroy the bullet after 2 seconds
 
     }
 

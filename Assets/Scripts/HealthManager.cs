@@ -8,12 +8,12 @@ public class HealthManager : MonoBehaviour
 {
     public Image healthBarImage;
 
-    public void SetMaxHealth(int maxHealth)
+    public void SetMaxHealth(float maxHealth)
     {
         healthBarImage.fillAmount = 1.0f; // Full health at start
     }
 
-    public void SetHealth(int currentHealth, int maxHealth)
+    public void SetHealth(float currentHealth, float maxHealth)
     {
         healthBarImage.fillAmount = (float)currentHealth / (float)maxHealth;
     }

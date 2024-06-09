@@ -11,7 +11,7 @@ public class PlayerAttack : MonoBehaviour
             Health health = collision.GetComponent<Health>();
             if (health != null)
             {
-                health.TakeDamage(5); // Deal 5 damage
+                health.TakeDamage(5.0f); // Deal 5 damage
             }
         }
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Bullet"))
