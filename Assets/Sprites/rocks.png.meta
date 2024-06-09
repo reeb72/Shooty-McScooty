@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 69848991d7e247f46bb4d93d43f2f247
+guid: 8865ce3f815f71e47b803c1e06f1e497
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,51 +110,145 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sandslopes_0
+      name: rocks_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: 8, y: -8}
-        - {x: -8, y: -8}
-        - {x: 8, y: 8}
-        - {x: 8, y: 0}
+      - - {x: -75, y: -75}
+        - {x: -75, y: -46}
+        - {x: -60, y: -46}
+        - {x: -59, y: -34}
+        - {x: -45, y: -32}
+        - {x: -45, y: -16}
+        - {x: -1, y: -15}
+        - {x: 0, y: -2}
+        - {x: 29, y: -1}
+        - {x: 30, y: -15}
+        - {x: 59, y: -15}
+        - {x: 60, y: -30}
+        - {x: 74, y: -31}
+        - {x: 75, y: -75}
       tessellationDetail: 0
       bones: []
-      spriteID: 663d5ecfcafef1044b99fcecdaa5df2a
-      internalID: 229268475
+      spriteID: 8c5f9615b809ae0488e4cae79b6a774d
+      internalID: 1958431034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sandslopes_1
+      name: rocks_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 150
         y: 0
-        width: 16
-        height: 16
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -8, y: 0}
-        - {x: -8, y: 8}
-        - {x: 8, y: -8}
-        - {x: -8, y: -8}
+      - - {x: -75, y: -75}
+        - {x: -75, y: -60}
+        - {x: -59.71199, y: -59.896}
+        - {x: -60, y: -45}
+        - {x: -45, y: -44}
+        - {x: -44, y: -16}
+        - {x: -14, y: -16}
+        - {x: -14, y: 0}
+        - {x: 14, y: -1}
+        - {x: 15, y: -27}
+        - {x: 20, y: -27}
+        - {x: 20, y: -30}
+        - {x: 30, y: -30}
+        - {x: 30, y: -46}
+        - {x: 59, y: -46}
+        - {x: 60, y: -60}
+        - {x: 74, y: -60}
+        - {x: 75, y: -75}
       tessellationDetail: 0
       bones: []
-      spriteID: 589d50c9056d4ac4fa4ec32920e40afe
-      internalID: 1513743432
+      spriteID: ddda9f9302e0a234c8f956b3099f97a7
+      internalID: 749269285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocks_2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -75, y: -75}
+        - {x: -75, y: -61}
+        - {x: -59, y: -60}
+        - {x: -60, y: -15}
+        - {x: -44, y: -15}
+        - {x: -45, y: 1}
+        - {x: -30, y: 1}
+        - {x: -31, y: 15}
+        - {x: 29, y: 15}
+        - {x: 30, y: 0}
+        - {x: 45, y: 0}
+        - {x: 46, y: -29}
+        - {x: 60, y: -30}
+        - {x: 61, y: -45}
+        - {x: 75, y: -46}
+        - {x: 75, y: -75}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3affb2b099a4bb047922d2cd070557fe
+      internalID: 1018322413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocks_3
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -75, y: -75}
+        - {x: -75, y: -61}
+        - {x: -58, y: -60}
+        - {x: -60, y: 30}
+        - {x: -44, y: 30}
+        - {x: -44, y: 44}
+        - {x: 1, y: 45}
+        - {x: 1, y: 59}
+        - {x: 61, y: 61}
+        - {x: 60, y: 45}
+        - {x: 75, y: 45}
+        - {x: 75, y: -75}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a140b9abbfe6c5342b41ba454e825591
+      internalID: 1515232799
       vertices: []
       indices: 
       edges: []
@@ -170,8 +264,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sandslopes_0: 229268475
-      sandslopes_1: 1513743432
+      rocks_0: 1958431034
+      rocks_1: 749269285
+      rocks_2: 1018322413
+      rocks_3: 1515232799
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

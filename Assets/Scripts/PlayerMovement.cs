@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal;
     private float speed = 6f;
     private float jump = 8f;
+    private bool canDoubleJump;
     private bool facingRight = true;
     private float lastShot;
     private float reloadTime = 0.6f;
@@ -27,9 +28,19 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (IsGrounded() && Input.GetButtonDown("Jump"))
+        if(IsGrounded()){
+            canDoubleJump = true; // To reset the double jump when grounded
+        }
+
+        if (Input.GetButtonDown("Jump"))
         {
+            if(IsGrounded()){
             rb.velocity = new Vector2(rb.velocity.x, jump);
+            }
+            else if(canDoubleJump){
+                rb.velocity = new Vector2(rb.velocity.x, jump);
+                canDoubleJump = false;
+            }
         }
 
         if (Input.GetButtonDown("Fire1") && Time.time >= lastShot + reloadTime) // Check if enough time has passed since the last shot
