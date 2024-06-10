@@ -2,11 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
     private float horizontal;
-    private float speed = 6f;
+    private float speed = 5.5f;
     private float jump = 8f;
     private bool canDoubleJump;
     private bool facingRight = true;
@@ -15,8 +16,8 @@ public class PlayerMovement : MonoBehaviour
     private bool doubleShot = false;
 
     private bool isDashing;
-    private float dashDistance = 10f;
-    private float dashDuration = 0.15f;
+    private float dashDistance = 13.5f;
+    private float dashDuration = 0.25f;
     private float dashCooldown = 0.7f;
     private float lastDash;
 
@@ -30,16 +31,19 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if(IsGrounded()){
+        if (IsGrounded())
+        {
             canDoubleJump = true; // To reset the double jump when grounded
         }
 
         if (Input.GetButtonDown("Jump"))
         {
-            if(IsGrounded()){
-            rb.velocity = new Vector2(rb.velocity.x, jump);
+            if (IsGrounded())
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jump);
             }
-            else if(canDoubleJump){
+            else if (canDoubleJump)
+            {
                 rb.velocity = new Vector2(rb.velocity.x, jump);
                 canDoubleJump = false;
             }
@@ -119,6 +123,30 @@ public class PlayerMovement : MonoBehaviour
         rb.gravityScale = originalGravity;
         isDashing = false;
         lastDash = Time.time; // Update the last dash time
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Health health = GetComponent<Health>();
+            if (health != null)
+            {
+                health.TakeDamage(10f);
+            }
+        }
+        else if (collision.gameObject.CompareTag("Cactus"))
+        {
+            Health health = GetComponent<Health>();
+            if (health != null)
+            {
+                health.TakeDamage(2.5f);
+            }
+        }
+        else if (collision.gameObject.CompareTag("Finish"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
     // Methods to handle power-ups

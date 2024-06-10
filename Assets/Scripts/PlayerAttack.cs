@@ -14,7 +14,9 @@ public class PlayerAttack : MonoBehaviour
                 health.TakeDamage(5.0f); // Deal 5 damage
             }
         }
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Bullet"))
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Enemy") 
+        || collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Bullet")
+        || collision.gameObject.CompareTag("Cactus"))
         {
             Destroy(gameObject);
         }

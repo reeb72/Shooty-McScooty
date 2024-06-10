@@ -82,6 +82,6 @@ public class Enemy : MonoBehaviour
 
     private void StopMoving()
     {
-        rb.velocity = Vector2.zero; // Stop the enemy's movement
+        rb.velocity = new Vector2(0,rb.velocity.y); // Stop the enemy's movement
     }
 }
