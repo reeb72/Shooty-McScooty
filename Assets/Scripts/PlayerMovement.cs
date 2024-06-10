@@ -103,11 +103,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (doubleShot)
         {
-            StartCoroutine(secondShot());
+            StartCoroutine(SecondShot());
         }
     }
 
-    private IEnumerator secondShot()
+    private IEnumerator SecondShot()
     {
         yield return new WaitForSeconds(0.25f);
         Shoot();
