@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private float lastShot;
     private float reloadTime = 0.6f;
     private bool doubleShot = false;
+    private int extraBullet = 0;
 
     private bool isDashing;
     private float dashDistance = 13.5f;
@@ -51,7 +52,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") && Time.time >= lastShot + reloadTime) // Check if enough time has passed since the last shot
         {
-            Shoot();
+            if (doubleShot)
+            {
+                StartCoroutine(SecondShot());
+            }
+            else
+            {
+                Shoot();
+            }
             lastShot = Time.time; // Update the last shot time!!!
         }
 
@@ -100,17 +108,18 @@ public class PlayerMovement : MonoBehaviour
 
         // Remove the bullet once it heads offScreen 
         Destroy(bullet, 1.5f);
-
-        if (doubleShot)
-        {
-            StartCoroutine(SecondShot());
-        }
     }
 
     private IEnumerator SecondShot()
     {
-        yield return new WaitForSeconds(0.25f);
         Shoot();
+        
+        // Shoot additional bullets based on the number of stacks
+        for (int i = 0; i < extraBullet; i++)
+        {
+            yield return new WaitForSeconds(0.1f); // Delay between shots
+            Shoot();
+        }
     }
 
     private IEnumerator Dash()
@@ -125,6 +134,7 @@ public class PlayerMovement : MonoBehaviour
         lastDash = Time.time; // Update the last dash time
     }
 
+    // Collision Handling 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
@@ -145,7 +155,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Finish"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            GameManager.instance.NextLevel();
         }
     }
 
@@ -173,5 +183,6 @@ public class PlayerMovement : MonoBehaviour
     public void EnableDoubleShot()
     {
         doubleShot = true;
+        extraBullet++;
     }
 }

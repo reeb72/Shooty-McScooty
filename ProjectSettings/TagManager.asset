@@ -8,6 +8,8 @@ TagManager:
   - Bullet
   - Wall
   - Cactus
+  - Heal
+  - PowerUp
   layers:
   - Default
   - TransparentFX

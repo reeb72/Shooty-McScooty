@@ -37,6 +37,18 @@ public class Health : MonoBehaviour
         }
     }
 
+    public void Heal(float healAmount)
+    {
+        currHealth += healAmount;
+
+        if (currHealth > maxHealth)
+        {
+            currHealth = maxHealth;
+        }
+
+        healthBar.SetHealth(currHealth, maxHealth);
+    }
+
     private void Die()
     {
         if (gameObject.CompareTag("Player"))
