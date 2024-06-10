@@ -44421,6 +44421,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1402982099}
     m_Modifications:
+    - target: {fileID: 4188724410688855311, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 678648900}
     - target: {fileID: 7407794410609700203, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
       propertyPath: m_Name
       value: enemyshooter
@@ -44811,6 +44815,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8898398545636195600, guid: 5ecf3644e4e08bb4b89d4cc38d483d56, type: 3}
+      propertyPath: m_Size.x
+      value: 2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8898398545636195600, guid: 5ecf3644e4e08bb4b89d4cc38d483d56, type: 3}
+      propertyPath: m_Size.y
+      value: 3.65
+      objectReference: {fileID: 0}
+    - target: {fileID: -8898398545636195600, guid: 5ecf3644e4e08bb4b89d4cc38d483d56, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8898398545636195600, guid: 5ecf3644e4e08bb4b89d4cc38d483d56, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.18
+      objectReference: {fileID: 0}
     - target: {fileID: 4014974849193123891, guid: 5ecf3644e4e08bb4b89d4cc38d483d56, type: 3}
       propertyPath: m_Name
       value: Player
@@ -45545,17 +45565,45 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1402982099}
     m_Modifications:
+    - target: {fileID: 1249790195582468716, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: fireRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249790195582468716, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: moveSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249790195582468716, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: bulletSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4188724410688855311, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 678648900}
+    - target: {fileID: 4188724410688855311, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: maxHealth
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 7407794410609700203, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
       propertyPath: m_Name
       value: enemyshooter
       objectReference: {fileID: 0}
     - target: {fileID: 9223093457037561241, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9223093457037561241, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9223093457037561241, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 438.6085
+      value: 438.60165
       objectReference: {fileID: 0}
     - target: {fileID: 9223093457037561241, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.919361
+      value: 7.8679886
       objectReference: {fileID: 0}
     - target: {fileID: 9223093457037561241, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -47071,6 +47119,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1402982099}
     m_Modifications:
+    - target: {fileID: 4188724410688855311, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 678648900}
     - target: {fileID: 7407794410609700203, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
       propertyPath: m_Name
       value: enemyshooter (1)
