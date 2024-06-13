@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isDashing;
     private float dashDistance = 13.5f;
     private float dashDuration = 0.25f;
-    private float dashCooldown = 0.7f;
+    private float dashCooldown = 0.55f;
     private float lastDash;
 
     [SerializeField] private Rigidbody2D rb;
