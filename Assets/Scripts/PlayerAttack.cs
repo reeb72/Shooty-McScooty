@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    public float bulletDamage = 5.0f;// damage of bullet
     public float fireballDamage = 8.0f; // Damage inflicted by fireball
-    public float laserDamage = 12.0f;  
+    public float laserDamage = 12.0f;  //damage of laser
     public float damage = 5.0f;
     void OnTriggerEnter2D(Collider2D collision)
     {
