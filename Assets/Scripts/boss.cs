@@ -70,22 +70,29 @@ public class Boss : MonoBehaviour
     }
 
     private void Shoot()
-{
-    Vector2 direction = (player.position - enemyFirePoint.position).normalized;
-    direction.y = 0; // Ensure the bullet only travels in the x direction
+    {
+        Vector2 direction = (player.position - enemyFirePoint.position).normalized;
+        direction.y = 0; // Ensure the bullet only travels in the x direction
 
-    // Determine whether to instantiate a fireball or a laser
-    GameObject shot;
-    float randomValue = Random.value; // Generates a random float
-    if (randomValue <= 0.7f) // 70% chance for fireball
-    {
-        shot = Instantiate(FireballPrefab, enemyFirePoint.position, enemyFirePoint.rotation);
+        // Determine whether to instantiate a fireball or a laser
+        float randomValue = Random.value; // Generates a random float
+        if (randomValue <= 0.7f) // 70% chance for fireball
+        {
+            GameObject shot = Instantiate(FireballPrefab, enemyFirePoint.position, enemyFirePoint.rotation);
+            shot.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+            lastShotEnemy = Time.time + fireRate;
+            Destroy(shot, 2.5f);
+
+        }
+        else // 30% chance for laser
+        {
+            GameObject shot = Instantiate(LaserPrefab, enemyFirePoint.position, enemyFirePoint.rotation);
+            shot.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+            lastShotEnemy = Time.time + fireRate;
+            Destroy(shot, 2.5f);
+
+        }
     }
-    else // 30% chance for laser
-    {
-        shot = Instantiate(LaserPrefab, enemyFirePoint.position, enemyFirePoint.rotation);
-    }
-}
 
     private void StopMoving()
     {
