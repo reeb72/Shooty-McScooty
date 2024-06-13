@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public GameObject bulletPrefab;
+    public GameObject laserPrefab;
+    public GameObject fireballPrefab;
     public Transform enemyFirePoint;
-    public float bulletSpeed = 10f;
-    public float moveSpeed = 1.5f;
+    public float bulletSpeed = 13f;
+    public float moveSpeed = 1.8f;
     public float fireRate = 3f;
     private float lastShotEnemy;
     private Transform player;
     private Rigidbody2D rb;
     private bool facingRight = false;
-    public float detectionRange = 10f;
+    public float detectionRange = 13f;
     public float stoppingDistance = 7.5f;
 
     void Start()
@@ -69,16 +70,26 @@ public class Enemy : MonoBehaviour
     }
 
     private void Shoot()
+{
+    Vector2 direction = (player.position - enemyFirePoint.position).normalized;
+    direction.y = 0; // Ensure the bullet only travels in the x direction
+
+    // Determine whether to instantiate a fireball or a laser
+    GameObject shot;
+    float randomValue = Random.value; // Generates a random float
+    if (randomValue <= 0.7f) // 70% chance for fireball
     {
-        Vector2 direction = (player.position - enemyFirePoint.position).normalized;
-        direction.y = 0; // Ensure the bullet only travels in the x direction
-
-        GameObject bullet = Instantiate(bulletPrefab, enemyFirePoint.position, enemyFirePoint.rotation);
-        bullet.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
-        lastShotEnemy = Time.time + fireRate;
-        Destroy(bullet, 2.5f); // Destroy the bullet after 2 seconds
-
+        shot = Instantiate(fireballPrefab, enemyFirePoint.position, enemyFirePoint.rotation);
     }
+    else // 30% chance for laser
+    {
+        shot = Instantiate(laserPrefab, enemyFirePoint.position, enemyFirePoint.rotation);
+    }
+
+    bullet.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+    lastShotEnemy = Time.time + fireRate;
+    Destroy(bullet, 2.5f); // Destroy the bullet after 2 seconds
+}
 
     private void StopMoving()
     {
