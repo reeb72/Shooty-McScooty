@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    public float damage = 5.0f;
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Enemy"))
@@ -11,7 +12,7 @@ public class PlayerAttack : MonoBehaviour
             Health health = collision.GetComponent<Health>();
             if (health != null)
             {
-                health.TakeDamage(5.0f); // Deal 5 damage
+                health.TakeDamage(damage);// Deal 5 damage
             }
         }
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Enemy") 

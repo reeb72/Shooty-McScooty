@@ -10,26 +10,32 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public void GameOver()
     {
-        PlayerPrefs.SetInt("PreviousSceneIndex", SceneManager.GetActiveScene().buildIndex);
+        int previousSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        PlayerPrefs.SetInt("PreviousSceneIndex", previousSceneIndex);
         PlayerPrefs.Save();
         SceneManager.LoadScene(1);
     }
 
-    private void Awake(){
-        if(instance == null){
+    private void Awake()
+    {
+        if (instance == null)
+        {
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else{
+        else
+        {
             Destroy(gameObject);
         }
     }
 
-    public void NextLevel(){
+    public void NextLevel()
+    {
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void LoadScene(string scene){
+    public void LoadScene(string scene)
+    {
         SceneManager.LoadSceneAsync(scene);
     }
 

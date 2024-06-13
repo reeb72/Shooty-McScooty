@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &11529897
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4357889395422981066, guid: 2255d4c039e4d9144a47d38aced13755, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 358.66895
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357889395422981066, guid: 2255d4c039e4d9144a47d38aced13755, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 18.067171
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357889395422981066, guid: 2255d4c039e4d9144a47d38aced13755, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0043464415
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357889395422981066, guid: 2255d4c039e4d9144a47d38aced13755, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357889395422981066, guid: 2255d4c039e4d9144a47d38aced13755, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357889395422981066, guid: 2255d4c039e4d9144a47d38aced13755, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357889395422981066, guid: 2255d4c039e4d9144a47d38aced13755, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357889395422981066, guid: 2255d4c039e4d9144a47d38aced13755, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357889395422981066, guid: 2255d4c039e4d9144a47d38aced13755, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357889395422981066, guid: 2255d4c039e4d9144a47d38aced13755, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218560509616851713, guid: 2255d4c039e4d9144a47d38aced13755, type: 3}
+      propertyPath: m_Name
+      value: Cake (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2255d4c039e4d9144a47d38aced13755, type: 3}
 --- !u!1 &12604962
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,6 +886,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4188724410688855311, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1432498448}
     - target: {fileID: 7407794410609700203, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
       propertyPath: m_Name
       value: enemyshooter (4)
@@ -943,6 +1004,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4188724410688855311, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1432498448}
     - target: {fileID: 7407794410609700203, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
       propertyPath: m_Name
       value: enemyshooter (11)
@@ -1000,6 +1065,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4188724410688855311, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1432498448}
     - target: {fileID: 7407794410609700203, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
       propertyPath: m_Name
       value: enemyshooter
@@ -1057,6 +1126,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4188724410688855311, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1432498448}
     - target: {fileID: 7407794410609700203, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
       propertyPath: m_Name
       value: enemyshooter (10)
@@ -1495,6 +1568,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fff5576937eaf34386ad6b8b76116ff, type: 3}
+--- !u!1001 &427357799
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4357889395422981066, guid: 2255d4c039e4d9144a47d38aced13755, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 197.37741
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357889395422981066, guid: 2255d4c039e4d9144a47d38aced13755, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 18.420862
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357889395422981066, guid: 2255d4c039e4d9144a47d38aced13755, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0043464415
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357889395422981066, guid: 2255d4c039e4d9144a47d38aced13755, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357889395422981066, guid: 2255d4c039e4d9144a47d38aced13755, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357889395422981066, guid: 2255d4c039e4d9144a47d38aced13755, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357889395422981066, guid: 2255d4c039e4d9144a47d38aced13755, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357889395422981066, guid: 2255d4c039e4d9144a47d38aced13755, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357889395422981066, guid: 2255d4c039e4d9144a47d38aced13755, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357889395422981066, guid: 2255d4c039e4d9144a47d38aced13755, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218560509616851713, guid: 2255d4c039e4d9144a47d38aced13755, type: 3}
+      propertyPath: m_Name
+      value: Cake
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2255d4c039e4d9144a47d38aced13755, type: 3}
 --- !u!1 &573527823
 GameObject:
   m_ObjectHideFlags: 0
@@ -51103,6 +51233,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4188724410688855311, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1432498448}
     - target: {fileID: 7407794410609700203, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
       propertyPath: m_Name
       value: enemyshooter (13)
@@ -51160,6 +51294,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4188724410688855311, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1432498448}
     - target: {fileID: 7407794410609700203, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
       propertyPath: m_Name
       value: enemyshooter (9)
@@ -51470,6 +51608,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4188724410688855311, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1432498448}
     - target: {fileID: 7407794410609700203, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
       propertyPath: m_Name
       value: enemyshooter (1)
@@ -51527,6 +51669,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4188724410688855311, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1432498448}
     - target: {fileID: 7407794410609700203, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
       propertyPath: m_Name
       value: enemyshooter (7)
@@ -51641,6 +51787,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4188724410688855311, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1432498448}
     - target: {fileID: 7407794410609700203, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
       propertyPath: m_Name
       value: enemyshooter (8)
@@ -51698,6 +51848,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4188724410688855311, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1432498448}
     - target: {fileID: 7407794410609700203, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
       propertyPath: m_Name
       value: enemyshooter (5)
@@ -51755,6 +51909,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4188724410688855311, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1432498448}
     - target: {fileID: 7407794410609700203, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
       propertyPath: m_Name
       value: enemyshooter (14)
@@ -51962,7 +52120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5caafb2cd4451284c8413621b8f55dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBarImage: {fileID: 0}
+  healthBarImage: {fileID: 964470503}
 --- !u!4 &1432498449
 Transform:
   m_ObjectHideFlags: 0
@@ -51986,6 +52144,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4188724410688855311, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1432498448}
     - target: {fileID: 7407794410609700203, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
       propertyPath: m_Name
       value: enemyshooter (6)
@@ -52043,6 +52205,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4188724410688855311, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1432498448}
     - target: {fileID: 7407794410609700203, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
       propertyPath: m_Name
       value: enemyshooter (15)
@@ -52214,6 +52380,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4188724410688855311, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1432498448}
     - target: {fileID: 7407794410609700203, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
       propertyPath: m_Name
       value: enemyshooter (3)
@@ -52530,6 +52700,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4188724410688855311, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1432498448}
     - target: {fileID: 7407794410609700203, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
       propertyPath: m_Name
       value: enemyshooter (2)
@@ -52701,6 +52875,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4188724410688855311, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1432498448}
     - target: {fileID: 7407794410609700203, guid: 37e4970221be05d469d2a0698cad018c, type: 3}
       propertyPath: m_Name
       value: enemyshooter (12)
@@ -53273,3 +53451,5 @@ SceneRoots:
   - {fileID: 416127422}
   - {fileID: 1450420551}
   - {fileID: 126816639}
+  - {fileID: 427357799}
+  - {fileID: 11529897}

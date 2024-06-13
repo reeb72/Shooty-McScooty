@@ -7,13 +7,16 @@ public class GameOverManager : MonoBehaviour
 {
     public void Retry()
     {
-        int previousSceneIndex = PlayerPrefs.GetInt("PreviousSceneIndex", 0);
-        
-        if (previousSceneIndex != 0)
+        int previousSceneIndex = PlayerPrefs.GetInt("PreviousSceneIndex", -1);
+
+        if (previousSceneIndex != -1)
         {
             SceneManager.LoadScene(previousSceneIndex);
         }
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        else
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 
     public void Quit()
