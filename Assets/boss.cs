@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class boss : MonoBehaviour
 {
-    public GameObject laserPrefab;
-    public GameObject fireballPrefab;
+    public GameObject LaserPrefab;
+    public GameObject FireballPrefab;
     public Transform enemyFirePoint;
     public float bulletSpeed = 13f;
     public float moveSpeed = 1.8f;
@@ -70,29 +70,25 @@ public class Enemy : MonoBehaviour
     }
 
     private void Shoot()
-{
-    Vector2 direction = (player.position - enemyFirePoint.position).normalized;
-    direction.y = 0; // Ensure the bullet only travels in the x direction
-
-    // Determine whether to instantiate a fireball or a laser
-    GameObject shot;
-    float randomValue = Random.value; // Generates a random float
-    if (randomValue <= 0.7f) // 70% chance for fireball
     {
-        shot = Instantiate(fireballPrefab, enemyFirePoint.position, enemyFirePoint.rotation);
-    }
-    else // 30% chance for laser
-    {
-        shot = Instantiate(laserPrefab, enemyFirePoint.position, enemyFirePoint.rotation);
-    }
+        Vector2 direction = (player.position - enemyFirePoint.position).normalized;
+        direction.y = 0; // Ensure the bullet only travels in the x direction
 
-    bullet.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
-    lastShotEnemy = Time.time + fireRate;
-    Destroy(bullet, 2.5f); // Destroy the bullet after 2 seconds
-}
+        // Determine whether to instantiate a fireball or a laser
+        GameObject shot;
+        float randomValue = Random.value; // Generates a random float
+        if (randomValue <= 0.7f) // 70% chance for fireball
+        {
+            shot = Instantiate(FireballPrefab, enemyFirePoint.position, enemyFirePoint.rotation);
+        }
+        else // 30% chance for laser
+        {
+            shot = Instantiate(LaserPrefab, enemyFirePoint.position, enemyFirePoint.rotation);
+        }
+    }
 
     private void StopMoving()
     {
-        rb.velocity = new Vector2(0,rb.velocity.y); // Stop the enemy's movement
+        rb.velocity = new Vector2(0, rb.velocity.y); // Stop the enemy's movement
     }
 }

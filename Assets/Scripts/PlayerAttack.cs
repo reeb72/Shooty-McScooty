@@ -21,13 +21,14 @@ public class PlayerAttack : MonoBehaviour
         else if (collision.gameObject.CompareTag("Boss")) // Check if collided with the boss
         {
             // Determine the type of attack based on the collided object's tag
+            Health health = collision.GetComponent<Health>();
             if (collision.gameObject.CompareTag("Fireball"))
             {
-                TakeDamage(fireballDamage); // Inflict fireball damage
+                health.TakeDamage(fireballDamage); // Inflict 8 damage
             }
             else if (collision.gameObject.CompareTag("Laser"))
             {
-                TakeDamage(laserDamage); // Inflict laser damage
+                health.TakeDamage(laserDamage); // Inflict 10 damage
             }
         }
 
