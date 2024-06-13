@@ -8,7 +8,7 @@ public class Boss : MonoBehaviour
     public GameObject FireballPrefab;
     public Transform enemyFirePoint;
     public float bulletSpeed = 13f;
-    public float moveSpeed = 1.8f;
+    public float moveSpeed = 0.75f;
     public float fireRate = 3f;
     private float lastShotEnemy;
     private Transform player;

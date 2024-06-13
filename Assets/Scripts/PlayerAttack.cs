@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public float bulletDamage = 5.0f;// damage of bullet
-    public float fireballDamage = 8.0f; // Damage inflicted by fireball
-    public float laserDamage = 12.0f;  //damage of laser
     public float damage = 5.0f;
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,20 +13,6 @@ public class PlayerAttack : MonoBehaviour
             if (health != null)
             {
                 health.TakeDamage(damage);// Deal 5 damage
-            }
-        }
-        
-        else if (collision.gameObject.CompareTag("Boss")) // Check if collided with the boss
-        {
-            // Determine the type of attack based on the collided object's tag
-            Health health = collision.GetComponent<Health>();
-            if (collision.gameObject.CompareTag("Fireball"))
-            {
-                health.TakeDamage(fireballDamage); // Inflict 8 damage
-            }
-            else if (collision.gameObject.CompareTag("Laser"))
-            {
-                health.TakeDamage(laserDamage); // Inflict 10 damage
             }
         }
 
