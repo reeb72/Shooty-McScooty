@@ -171,3 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa00f9e5b53dfa249855b3832ec967bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireballDamage: 0
+  laserDamage: 0
+  damage: 5
